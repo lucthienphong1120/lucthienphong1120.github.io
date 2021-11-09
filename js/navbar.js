@@ -1,20 +1,16 @@
 var header = document.getElementById('header-navbar');
 var menu = document.getElementById('menu-btn');
-var height = header.clientHeight;
+// var height = header.clientHeight;
+var check = true;
 menu.onclick = function () {
-	var close = header.clientHeight === height;
-	if (close) {
+	// var close = header.clientHeight === height;
+	// console.log(height);
+	if (check) {
 		header.style.height = 'auto'; //mở
+		check = false;
 	}
 	else {
 		header.style.height = null; //đóng
-	}
-}
-//chọn menu
-var items = document.querySelectorAll('#header-navbar li');
-for (var i = 0; i < items.length; i++) {
-	var item = items[i];
-	item.onclick = function (event) {
-		header.style.height = null; //đóng
+		check = true;
 	}
 }
