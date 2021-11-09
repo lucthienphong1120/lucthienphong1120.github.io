@@ -69,6 +69,10 @@ a:focus {
 
 .main {
   background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
+  -webkit-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
+  -moz-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
+  -o-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
+  -ms-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
 }
 
 .more {
@@ -794,6 +798,10 @@ li.dropdown{
   }
   .menu {
     display: block;
+  }
+  .type-name {
+    white-space: normal;
+    width: 100%;
   }
   .mobile-icon-name {
     display: inline-block;
