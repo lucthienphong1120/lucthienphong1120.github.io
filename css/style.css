@@ -852,6 +852,9 @@ li.dropdown{
   background: linear-gradient(100deg, #daa2fd, #c0fdff);
   z-index: 100;
 }
+#topic {
+  font-family: 'themify';
+}
 #back-topic {
   color: black;
   background-color: white;
