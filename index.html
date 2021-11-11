@@ -79,7 +79,7 @@
 			<div class="row">
 				<div class="col-md-6 col-sm-12">
 					<div class="about" data-aos="fade-right" data-aos-duration="500" data-aos-easing="ease-in-sine">
-						<h3 class="accent" style="margin: 0 0 5px;">Easy Profile</h3>
+						<h3 class="profile-tittle accent" style="margin: 0 0 5px;">Easy Profile</h3>
 						<div style="display: flex; align-items: baseline;font-family: 'FontAwesome';">
 							<h2 style="margin: 15px 0;">Lục Thiên Phong</h2>
 							<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
@@ -268,6 +268,19 @@
 								</li>
 								<li class="skills-item">
 									<div>
+										<img src="./images/skill/unity.svg">
+										Unity
+									</div>
+									<div class="rating-star">
+										<i class="star-checked fa fa-star"></i>
+										<i class="star-checked fa fa-star"></i>
+										<i class="star-uncheck fa fa-star"></i>
+										<i class="star-uncheck fa fa-star"></i>
+										<i class="star-uncheck fa fa-star"></i>
+									</div>
+								</li>
+								<li class="skills-item">
+									<div>
 										<img src="./images/skill/Csharp.svg">
 										C#
 									</div>
@@ -356,7 +369,7 @@
 				</div>
 				<div class="col-md-4 col-sm-12">
 					<div class="achievements" data-aos="fade-up-left" data-aos-duration="1500">
-						<h2>Achievements</h2>
+						<h2>Description</h2>
 						<ul style="font-family: auto;">
 							<li>
 								<i style="color: #00bf00;" class="fa fa-check-circle"></i>
@@ -411,7 +424,7 @@
 					<div class="experience" data-aos="fade-left" data-aos-duration="1500">
 						<h2 class="white">Experiences</h2>
 						<div class="experience-content">
-							<h4 class="experience-title accent" style="text-shadow: 0 0 2px black;">A Full Stack
+							<h4 class="experience-title accent" style="text-shadow: 0 0 1px black;">A Full Stack
 								Developer - A Blogger</h4>
 							<h5>CodingReshapeFuture Company</h5>
 							<span></span><span></span>
@@ -443,7 +456,7 @@
 	</div>
 	<div class="more">
 		<div class="more-body" style="font-family: 'FontAwesome';">
-			<div class="container" data-aos="fade-up">
+			<div class="container" data-aos="fade-up" data-aos-duration="1500">
 				<div class="more-title">
 					<h2>About me</h2>
 					<p>
@@ -460,7 +473,7 @@
 					</h3>
 					<p>
 						<span class="focus-red">
-							Kiến thức như một ngọn lửa, chỉ cần có người dẫn đường, nó sẽ bùng cháy hết mình!						
+							Kiến thức như một ngọn lửa, chỉ cần có người dẫn đường, nó sẽ bùng cháy hết mình!
 						</span>
 					</p>
 					<div class="row">
@@ -505,25 +518,14 @@
 									<strong>Hiên tại:</strong>
 									<span>Leader team CRF</span>
 								</li>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Công việc:</strong>
-									<span>Như trên đã nói</span>
-								</li>
 							</ul>
 						</div>
 					</div>
-					<p>
-						<span class="focus-red">
-							Đừng phụ thuộc quá nhiều vào người khác để đến khi nhìn lại bản thân thì chẳng làm được gì
-							nên trò.
-						</span>
-					</p>
 				</div>
 			</div>
 		</div>
 		<div id="timeline" class="more-body" style="font-family: 'FontAwesome';">
-			<div class="container" data-aos="fade-up">
+			<div class="container" data-aos="fade-right" data-aos-duration="1500">
 				<div class="more-title">
 					<h2>Leaning time</h2>
 					<h6>
@@ -682,7 +684,7 @@
 			</a>
 		</div>
 		<div id="contact" class="more-body" style="padding-top: 40px; font-family: 'FontAwesome';">
-			<div class="container" data-aos="fade-up">
+			<div class="container">
 				<div class="more-title">
 					<h2>Liên hệ</h2>
 					<h6>
@@ -718,13 +720,48 @@
 				</div>
 			</div>
 		</div>
+		<div id="topic-blog" class="more-body" style="font-family: 'FontAwesome';">
+			<div class="container" data-aos="fade-left" data-aos-duration="1500">
+				<div class="more-title">
+					<h2>Topic</h2>
+					<h6>
+						Ở đây có vài topic nhỏ bạn có thể đọc
+					</h6>
+				</div>
+				<div class="content">
+					<div>
+						<h2 style="border-left: 5px solid #a0aec0; padding: 15px">All Posts</h2>
+						<ul class="topic-list">
+							<li class="topic-item">
+								<div class="topic-tittle">How did i build this blog ?</div>
+								<a href="#" class="topic-btn" onclick="showtopic1()">Blog</a>
+							</li>
+							<li class="topic-item">
+								<div class="topic-tittle">What is phishing ? How to hack facebook ?</div>
+								<a href="#" class="topic-btn" onclick="showtopic2()">Phishing</a>
+							</li>
+							<li class="topic-item">
+								<div class="topic-tittle">5 ways to learn English</div>
+								<a href="#" class="topic-btn" onclick="showtopic3()">English</a>
+							</li>
+							<li class="topic-item">
+								<div class="topic-tittle">How to "HACK" NASA ?</div>
+								<a href="#" class="topic-btn" onclick="showtopic4()">Hack</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div id="toast"></div>
+	<div id="topic"></div>
 	<!-- footer section -->
 	<footer>
 		<h2>CODING RESHAPE FUTURE</h2>
 		<h4 style="font-family: 'themify';">Lục Thiên Phong</h4>
-		<div class="footer-learning" style="margin-bottom: 5px;">License: the content based on 90% truth, refer to SilverBoss, Vtx, Vietrux team landing</div>
+		<div class="footer-learning" style="margin-bottom: 5px;">License: the content based on 90% truth, refer to
+			SilverBoss, VtxTeam, Codelearn and Vietrux landing</div>
 		<div class="social-list">
 			<a href="https://www.facebook.com/profile.php?id=100045406261491" target="_blank"><i
 					class="ti-facebook"></i></a>
@@ -749,8 +786,10 @@
 	<script src="./js/timeline.js"></script>
 	<script src="./js/form.js"></script>
 	<script src="./js/toast.js"></script>
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="./js/topic.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script>
 		AOS.init();
 		$('#year').text(new Date().getFullYear() - 2003);

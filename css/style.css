@@ -24,6 +24,10 @@ h4 {font-size:24px;}
 h5 {font-size:20px;}
 h6 {font-size:18px;}
 
+hr {
+  border-top: 2px solid dodgerblue;
+}
+
 section {
   padding: 15px 0;
 }
@@ -68,6 +72,7 @@ a:focus {
 }
 
 .main {
+  /* background-image: linear-gradient(45deg, #daa2fd, #c0fdff); */
   background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
   -webkit-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
   -moz-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
@@ -420,7 +425,11 @@ header hr {
   margin: 5px;
   border-radius: 10px;
   transition: all linear 1s;
-  text-shadow: 0 0 2px black;
+  text-shadow: none;
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  -o-text-shadow: none;
+  -ms-text-shadow: none;
 }
 .intro-blog {
   color: #6200ff;
@@ -786,6 +795,70 @@ li.dropdown{
   padding: 0 16px;
   cursor: pointer;
 }
+/* topic */
+.topic-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin-top: 30px;
+}
+.topic-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  height: 50px;
+  border: 2px solid #ffe400;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.topic-tittle {
+  font-size: 18px;
+  margin-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.topic-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100px;
+  height: 25px;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: #ffe400;
+  color: black;
+  text-shadow: none;
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
+  -o-text-shadow: none;
+  -ms-text-shadow: none;
+}
+.topic-btn:hover {
+  background-color: black;
+  color: white;
+}
+.topic-main {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(100deg, #daa2fd, #c0fdff);
+  z-index: 100;
+}
+#back-topic {
+  color: black;
+  background-color: white;
+}
+#back-topic:hover {
+  background-color: aquamarine;
+}
 /* responsive */
 @media ( max-width: 980px ) {
   .skills, .achievements, .experience {
@@ -815,6 +888,9 @@ li.dropdown{
   .navbar-brand-notuse:nth-child(4) {
     border-top: 1px solid black;
   }
+  .topic-item {
+    width: 100%;
+  }
 }
 
 @media ( max-width: 500px ) {
@@ -823,6 +899,9 @@ li.dropdown{
   }
   .skills-list li {
     width: 95%;
+  }
+  .profile-tittle {
+    margin: 10px 0;
   }
 }
 
