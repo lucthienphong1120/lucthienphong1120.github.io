@@ -33,22 +33,32 @@ function showtopic1() {
     showtopic(
         title = `How did i build this blog ?`,
         message = `
-        <p>Yo, what's up guys it's LTP welcome to my new blog</p>
-        <p>This blog created with bootstrap 4 some javascript and jquery</p>
-        <p>So today, we are going to talk about how I created this blog. The first thing you need to
-            create a blog for is to know how to code, you need to know something about html, css or
-            a little bit of javascript, actually, i made this blog with bootstrap 4, html, css, js,
-            jquery that's it, i used array for these posts</p>
-        <p>this is a bad blog tbh, i created this blog just for fun but if you need a better blog
-            you need to know <br><br> front-end: html,css,js <br><br> back-end: php,java,sql</p>
-        <p>but !!!, you don't know programming, you don't know what should to do now !!?!?!?!?!?.
-        </p><br>
-        <p>here some links create the website without coding</p><br><a
-            href="https://www.wocode.com/blog">WoCode</a><br><a
-            href="https://www.wix.com/">Wix</a><br>
-        <p>But I encourage you if you know how to code, then do it yourself, it's a good way to
-            practice and improve</p>
-        <p>Okay, thanks to reading my post, this is my first post and it's very short</p>
+        <h2>Hôm nay mình sẽ hướng dẫn các bạn cách làm một blog</h2>
+        <p>Khi mới xuất hiện, Blog nhanh chóng trở thành một từ phổ biến và có một điều chắc chắn: Internet giống như một bục diễn thuyết và hàng triệu người sẵn sàng xây dựng tiếng nói của mình qua blog – một từ rút gọn của "web log".</p>
+        <p>Xây dựng một trang self-hosted blog (hay còn gọi là stand alone blog). Đây là loại blog tự host, khái niệm này được phân biệt với hosted blog là các dịch vụ blog miễn phí trên mạng. Điều này có nghĩa là mua một địa chỉ web (hay còn gọi là domain name), mua tên miền, trả phí để lưu trữ trên web và sau đó là tự mình xây dựng trang blog riêng.</p>
+        <h2>Trước khi bắt đầu</h2>
+        <p>Có 2 điều cần phải thực hiện trước khi xây dựng self-hosted blog. Đầu tiên là đăng ký domain name và thứ 2 là sắp xếp host: hiệu quả nhất là sử dụng không gian lưu trữ trên một server, server này sẽ kết nối với web để trang blog luôn truy cập được.</p>
+        <p>Mặc dù không phải là bắt buộc nhưng sẽ tốt hơn là mua cả 2 yêu cầu trên từ cùng một công ty. Bên cạnh đó, có rất nhiều hãng host web bao gồm web domain trong gói host. Hiện nay, có rất nhiều công ty cung cấp dịch vụ host và đăng ký domain name nhưng không có cách nào để phân biệt giữa các nhà cung cấp. Mặc dù vậy, có một vài điều bạn nên xem qua trước khi ký hợp đồng với họ.</p>
+        <p>Bên cạnh đó, hãy tìm lựa chọn ẩn địa chỉ portal (địa chỉ bưu chính) khỏi bị lộ khi đăng kí. Ngoài ra, hãy nhớ đánh dấu vào lịch để không quên thời gian hết hạn. Công ty bạn đăng ký miền với họ (hay còn gọi là registrar) sẽ gửi một thông báo nhắc nhở. Dẫu vậy, quên ngày hết hạn có thể gây ra nhiều phức tạp, thậm chí còn khiến bạn mất mãi mãi tên miền của mình.</p>
+        <p>Website hosting – thuê không gian lưu trữ trên một server internet sẽ lưu trữ trang blog của bạn – là nơi phức tạp hơn đôi chút. Điều này là do có rất nhiều lựa chọn khác nhau.</p>
+        <h2>Lựa chọn host</h2>
+        <p>Khi nói về việc chọn một host cho trang WordPress blog, thực chất chỉ có 2 yêu cầu – hỗ trợ cho PHP 5.2.4 và MySQL and 5.0.15.</p>
+        <p>Người dùng không cần phải nghĩ xem nó là cái gì mà chỉ cần biết rằng nó sẽ cho phép các bài viết của bạn được đăng tải bằng cách sử dụng đường link thân thiện hơn, ví dụ là www.yourwebdomain.co.uk/events thay vì www.yourwebdomain.co.uk/?p=69.</p>
+        <h2>Blog dễ dàng hơn</h2>
+        <p>Cũng là một lựa chọn phổ biến (ở trang www.wordpress.com chứ không phải www.wordpress.org). Google cũng góp mặt trong “cuộc chơi” này với Blogger (sắp đổi tên thành Google Blogs): nếu có tài khoản Google (bao gồm cả Gmail), bạn có thể sử dụng trang blog này ngay lập tức</p>
+        <h2>Nhận phần mềm</h2>
+        <p>Trước tiên, bạn sẽ cần một cách nào đó để đăng tải các file lên server. Điều này có thể thực hiện bằng cách sử dụng một số công cụ như File Transfer Protocol, hoặc FTP. Một số hỗ trợ FTP cơ bản đã được tích hợp sẵn trong Windows nhưng chúng tôi vẫn khuyến cáo người dùng download một trong những công cụ FTP riêng miễn phí đang có trên thị trường. Nó sẽ giúp công việc này dễ dàng hơn nhiều. Công cụ được yêu thích khá nhiều là Filezilla.</p>
+        <p>Windows cũng có Notepad, là công cụ chỉnh sửa văn bản cơ bản, nhưng chúng tôi khuyến cáo người dùng cài đặt Notepad++. Đây là công cụ miễn phí, sử dụng màu để giúp việc chỉnh sửa dễ dàng hơn. Tất nhiên, điều chắc chắn bạn cần WordPress.</p>
+        <p>Khi hoàn thành, phải chuột vào file mới download và chọn Extract hoặc Extract All để chạy wizard giải nén. Kích Next → Browse → Desktop → OK → Next. Kích vào để loại bỏ dấu tích ở hộp thoại “Show extracted files” rồi kích Finish.</p>
+        <h2>Tạo một cơ sở dữ liệu</h2>
+        <p>Để thực hiện, chạy Notepad++ và kích vào File → Open. Điều hướng tới folder WordPress trên Windows Desktop và kích đúp vào file có tên “wp-config-sample.php”. Notepad++ sẽ hiển thị số dòng ở bên tay trái của cửa sổ. Nếu chúng không hiển thị, kích vào Settings → Preferences. Chọn thẻ Editing và đặt dấu tích vào hộp thoại “Display line number”. Sau đó, kích Close. Tiếp đến, cuộn chuột xuống wp-config-sample.php để tìm cài đặt MySQL – nó sẽ nằm ở dòng 19.</p>
+        <p>Bạn sẽ thấy nơi điền chữ cho tên cơ sở dữ liệu, tên người dùng (dòng 22) và mật khẩu (dòng 25, lần lượt là “database_name_here”, “username_here” và “password_here”. Người dùng chỉ việc thay thế chúng bằng thông tin chi tiết cá nhân, nhưng nhớ giữ dấu ngoặc kép.</p>
+        <p>Chú ý rằng entry MySQL hostname (dòng 28) thường được để là “localhost” – nhưng hãy nhớ kiểm tra lại web host xem có gì khác biệt hay không.</p>
+        <p>Còn một mục khác cũng cần phải thay đổi, giữa dòng 45 và 52. Mục này được sử dụng để giúp bảo vệ WordPress khỏi hacker và yêu cầu nhập chuỗi code 8 ký tự độc đáo. Thực tế, chúng được tạo tự động bởi WordPress và nếu nhìn vào dòng 40 trong file wp-config-sample.php, bạn sẽ thấy một đường link để tạo code.</p>
+        <p>Code được tạo tự động mỗi lần địa chỉ được ghé thăm, vậy nên hãy nhớ rằng bạn đã đặt chúng thật độc đáo và an toàn khi sử dụng. Copy và paste văn bản từ trang web vào Notepad++ để thay thế những dòng này.</p>
+        <p>Sau khi đã thực hiện các thay đổi trên, kích vào menu File và chọn Save As. Chỉnh sửa tên file thành “wp-config” (xóa đoạn “-sample”) và kích Save. Folder WordPress giờ đây đã sẵn sàng để đăng tải bài viết.</p>
+        <h2>Trên đây là demo các bước thực hiện</h2>
+        <p>xem thêm <a href="https://www.crf-blogger.gq/huong-dan-tao-mot-blogger-nhu-toi-da-lam/" target="_blank">chi tiết</a> cách thực hiện</p>
         `
     );
 }
@@ -70,8 +80,7 @@ function showtopic2() {
         <p>1) .html</p>
         <p>2) .php</p>
         <p>3) .txt</p>
-        <p>Download 3 files done: <a
-                href="https://drive.google.com/file/d/0B7vTnwoYzqRlWDJBdXdUSm1CSjA/view?usp=sharing">Here</a>
+        <p>Download 3 files: <a href="https://drive.google.com/file/d/0B7vTnwoYzqRlWDJBdXdUSm1CSjA/view?usp=sharing">Here</a>
         </p>
         <h2>Step 1:</h2>
         <p>Open a website where you want to create a fake login page. Here I use facebook:</p>
