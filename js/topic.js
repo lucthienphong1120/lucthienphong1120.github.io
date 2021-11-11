@@ -12,8 +12,8 @@ function showtopic(title,message) {
     topic.innerHTML = `
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-8">
-                                    <h1 class="mt-4">${title}</h1>
+                                <div class="col-lg-10">
+                                    <h1 style="font-size: 45px;">${title}</h1>
                                     <p style="font-size: 18px;">
                                         by <a href="#">LTP</a>
                                     </p>
