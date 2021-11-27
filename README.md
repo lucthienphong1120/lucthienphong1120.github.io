@@ -1,3 +1,3 @@
-# lucthienphong1120.github.io
+# https://ltp110.tk
 
 my personal website
