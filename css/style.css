@@ -416,7 +416,7 @@ header hr {
   flex-wrap: wrap;
   justify-content: center;
 }
-.intro-blog, .intro-youtube, .intro-facebook {
+.intro-blog, .intro-youtube, .intro-facebook, .intro-linkedin {
   font-weight: bold;
   font-size: 16px;
   font-family: 'FontAwesome';
@@ -431,23 +431,26 @@ header hr {
   -o-text-shadow: none;
   -ms-text-shadow: none;
 }
-.intro-blog {
+.intro-blog:hover, .intro-youtube:hover, .intro-facebook:hover, .intro-linkedin:hover {
+  background: linear-gradient(45deg, black, #ccc);
+  color: white;
+  text-decoration: none;
+  text-shadow: none;
+}
+.intro-blog, .fa-edit {
   color: #6200ff;
 }
-.intro-youtube {
+.intro-youtube, .fa-youtube {
   color: red;
 }
-.intro-facebook {
+.intro-linkedin, .fa-linkedin {
+  color: #2374e1;
+}
+.intro-facebook, .fa-facebook {
   color: #007eff;
 }
 .intro-icon {
   padding-left: 5px;
-}
-.intro-blog:hover, .intro-youtube:hover, .intro-facebook:hover {
-  background: linear-gradient(45deg, black, transparent);
-  color: white;
-  text-decoration: none;
-  text-shadow: none;
 }
 /* footer section */
 footer {
@@ -882,10 +885,16 @@ li.dropdown{
   .mobile-icon-name {
     display: inline-block;
   }
+  .navbar-brand {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
   .navbar-brand-notuse {
-    display: block;
+    display: inline-flex;
     width: 100%;
     background-color: #ccc;
+    justify-content: center;
+    align-items: center;
     border-bottom: 1px solid black;
   }
   .navbar-brand-notuse:nth-child(4) {
