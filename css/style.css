@@ -449,6 +449,12 @@ header hr {
 .intro-facebook, .fa-facebook {
   color: #007eff;
 }
+.fa-github {
+  color: #333;
+}
+.fa-user {
+  color: darkgreen;
+}
 .intro-icon {
   padding-left: 5px;
 }
