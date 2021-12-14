@@ -12,7 +12,7 @@ function sendmail() {
       SecureToken: "6c48748a-5544-45f3-94f2-d42e4cf07810",
       To: 'chung8962003@gmail.com',
       From : "aichoibangbangko@gmail.com",
-      Subject: "Tin nhắn mới từ " + name,
+      Subject: subject,
       Body: Body
    }).then(
       message => {
