@@ -417,12 +417,16 @@ header hr {
   justify-content: center;
 }
 .intro-blog, .intro-youtube, .intro-facebook, .intro-linkedin {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   font-weight: bold;
   font-size: 16px;
   font-family: 'FontAwesome';
   background-color: white;
+  min-width: 200px;
   padding: 8px;
-  margin: 5px;
+  margin: 5px 10px;
   border-radius: 10px;
   transition: all linear 1s;
   text-shadow: none;
@@ -451,9 +455,6 @@ header hr {
 }
 .fa-github {
   color: #333;
-}
-.fa-user {
-  color: darkgreen;
 }
 .intro-icon {
   padding-left: 5px;
