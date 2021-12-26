@@ -311,9 +311,9 @@ header hr {
   min-width: 165px;
 }
 .avatar-img {
-  background-image: url(../images/user/239884796_677228403233766_8745063908749661146_n.png);
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url(../images/avatar/2.png) no-repeat center center / cover;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   position: absolute;
   top: 12px;
   left: 17px;
