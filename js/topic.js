@@ -29,6 +29,7 @@ function showtopic(title,message) {
                     `;
     main.appendChild(topic);    //add child
 }
+// Topics
 function showtopic1() {
     showtopic(
         title = `How did i build this blog ?`,
@@ -58,75 +59,48 @@ function showtopic1() {
         <p>Code được tạo tự động mỗi lần địa chỉ được ghé thăm, vậy nên hãy nhớ rằng bạn đã đặt chúng thật độc đáo và an toàn khi sử dụng. Copy và paste văn bản từ trang web vào Notepad++ để thay thế những dòng này.</p>
         <p>Sau khi đã thực hiện các thay đổi trên, kích vào menu File và chọn Save As. Chỉnh sửa tên file thành “wp-config” (xóa đoạn “-sample”) và kích Save. Folder WordPress giờ đây đã sẵn sàng để đăng tải bài viết.</p>
         <h2>Trên đây là demo các bước thực hiện</h2>
-        <p>xem thêm <a href="https://www.crf-blogger.gq/huong-dan-tao-mot-blogger-nhu-toi-da-lam/" target="_blank">chi tiết</a> cách thực hiện</p>
+        <p>Xem chi tiết tại <a href="https://www.crf-blogger.gq/huong-dan-tao-mot-blogger-nhu-toi-da-lam/" target="_blank">https://www.crf-blogger.gq/huong-dan-tao-mot-blogger-nhu-toi-da-lam/</a></p>
         `
     );
 }
 function showtopic2() {
     showtopic(
-        title = `What is phishing ? How to hack facebook ?`,
+        title = `What is phishing? How to prevent phishing?`,
         message = `
-        <p>Hey guys, i'm LTP, so this is the second post. Today we will talk about how to HACK
-            facebook, well this is a really really interesting question. Actually, it's hard to hack a
-            facebook account but you can do it. Let's go !</p>
+        <p>Phishing là một hình thức tấn công mạng nguy hiểm, có thể gây ra nhiều thiệt hại cho các cá nhân, tổ chức, hay doanh nghiệp. Cùng tìm hiểu Tấn công Phishing là gì? Một số cách thức nhận biết và phòng chống tấn công Phishing qua website giả mạo hiệu quả.</p>
         <h2>What is Phishing?</h2>
-        <p>Phishing is a technique that creates a Login page that looks like the real page, when you or
-            someone else logs in to that site, you enter marked information. In this article I will show
-            you how to create simple fake Facebook login pages. The purpose is not to guide you into
-            misleading information, but to show you how people created it, how to identify and prevent a
-            phishing website.</p>
-        <h2>Create a phishing site like a Facebook page.</h2>
-        <p>To do this you need to create the following 3 files:</p>
-        <p>1) .html</p>
-        <p>2) .php</p>
-        <p>3) .txt</p>
-        <p>Download 3 files: <a href="https://drive.google.com/file/d/0B7vTnwoYzqRlWDJBdXdUSm1CSjA/view?usp=sharing">Here</a>
-        </p>
-        <h2>Step 1:</h2>
-        <p>Open a website where you want to create a fake login page. Here I use facebook:</p>
-        <p>Right click and select view page source (view page source).</p>
-        <p>A new tab will appear, you can highlight all the contents in it using ctrl + A and copy &amp;
-            paste it into notepad, you can use Notepad ++, Download here.</p>
-        <p>Delete the first line
-            "DOCTYPE html" and then save this notepad to index.html. (Save that clip, you will
-            edit it in the next steps.)
-        </p>
-        <h2>Step 2:</h2>
-        <p>Open the notepad and copy the entire code below and save it as login.php</p>
-        <h2>Step 3:</h2>
-        <p>Create another notepage file named 'pass.txt' and leave it there.</p>
-        <p>At this point, we have 3 files needed.</p>
-        <h2>Step 4:</h2>
-        <p>Next, you upload 2 files, login.php and pass.txt just created in step 2 and step 3 on a
-            certain webhosting. Here I use free hosting is: http://www.byethost.com You must be signing
-            to face it. How to register Host how you can refer to <a
-                href="http://www.krongnem.com/home/itclub/computertips/byethost">Here</a></p>
-        <p>After registering, go to the Online file manager, go to the htdocs directory and choose to
-            upload and upload both the newly created login.php and pass.txt files to the host.</p>
-        <p>-----&gt; Only pass.txt file you CHMOD it is 777.</p>
-        <h2>Step 5:</h2>
-        <p>Upload the index.html file you just created in step 1 to Google Drive. (Normally, you upload
-            all 3 files to the host is ok, but Currently some hosts are able to identify Phishing and
-            Block which accounts to block Phishing, so Google Drive is the best choice to create hosting
-            containing Phishing without being blocked from the link. )</p>
-        <p>Before uploading you need to edit the index.html file in step 1 as follows:</p>
-        <p>- Open the index.html file in Notepad, press Ctrl + F in notepad and find the word 'action',
-            after which it has the line: https://www.facebook.com/login.php?login_attempt=1&amp;lwv=110
-        </p>
-        <p>Please delete all content in 'quotes' and instead 'www.username-yours.byethost ??. com /
-            login.php'</p>
-        <p>('www.username-your-your.byethost ??. com / login.php' is the domain name containing the
-            login.php file of the host you uploaded it above.)</p>
-        <p>Next, you go to google drive and create a directory, here I create the directory name as
-            host.</p>
-        <p>Upload the index.html file to the google drive host directory.</p>
-        <p>Save and copy the file path into Notepage or Word, etc</p>
-        <p>Example: https://drive.google.com/file/d/0B7vTnwoYzqRlNS12LVZCOVlXZnM/view?usp=sharing</p>
-        <p>Copy and Paste it again after https://googledrive.com/host/ into</p>
-        <p>https://googledrive.com/host/0B7vTnwoYzqRlNS12LVZCOVlXZnM</p>
-        <p>Copy the above address to the address of the browser of Chrome, Coc Coc, Firefox, ... To go
-            to Facebook's Fake page. So the page you just created looks like the facebook page.</p>
-        <p>Also spreading phishing web links to someone is your way</p>
+        <p>Phishing (Tấn công giả mạo) là hình thức tấn công mạng mà kẻ tấn công giả mạo thành một đơn vị uy tín để lừa đảo người dùng cung cấp thông tin cá nhân cho chúng..</p>
+        <h2>Các phương thức tấn công Phishing</h2>
+        <p>Có nhiều kỹ thuật mà tin tặc sử dụng để thực hiện một vụ tấn công Phishing.</p>
+        
+        <h4>1. Giả mạo email</h4>
+        <p>Một trong những kỹ thuật cơ bản trong tấn công Phishing là giả mạo email. Tin tặc sẽ gửi email cho người dùng dưới danh nghĩa một đơn vị/tổ chức uy tín, dụ người dùng click vào đường link dẫn tới một website giả mạo và “mắc câu”.</p>
+        <p>Những email giả mạo thường rất giống với email chính chủ, chỉ khác một vài chi tiết nhỏ, khiến cho nhiều người dùng nhầm lẫn và trở thành nạn nhân của cuộc tấn công.</P>
+        <ul>
+            <li>Địa chỉ người gửi (VD: địa chỉ đúng là sales.congtyA@gmail.com thì địa chỉ giả mạo có thể là sale.congtyA@gmail.com)</li>
+            <li>Chèn Logo chính thức của tổ chức để tăng độ tin cậy</li>
+            <li>Thiết kế các cửa sổ pop-up giống y hệt bản gốc (cả về màu sắc, font chữ,…)</li>
+            <li>Sử dụng kĩ thuật giả mạo đường dẫn (link) để lừa người dùng (VD: text là vietcombank.com.vnnhưng khi click vào lại điều hướng tới vietconbank.com.vn)</li>
+            <li>Sử dụng hình ảnh thương hiệu của các tổ chức trong email giả mạo để tăng độ tin cậy.</li>
+        <h4>2. Giả mạo Website</h4>
+        <p>Thực chất, việc giả mạo website trong tấn công Phishing chỉ là làm giả một Landing page chứ không phải toàn bộ website. Trang được làm giả thường là trang đăng nhập để cướp thông tin của nạn nhân. Kỹ thuật làm giả website có một số đặc điểm sau:</p>
+        <ul>
+            <li>Thiết kế giống tới 99% so với website gốc</li>
+            <li>Đường link (url) chỉ khác 1 ký tự duy nhất. VD: reddit.com (thật) vs redit.com (giả); google.com vs gugle.com; microsoft.com vs mircosoft.com hoặc verify-microsoft.com.</li>
+            <li>Không có thông tin của người dùng</li>
+            <li>Luôn có những thông điệp khuyến khích người dùng nhập thông tin cá nhân vào website (call-to-action).</li>
+        </ul>
+        <h4>3. Vượt qua các bộ lọc Phishing</h4>
+        <p>Hiện nay, các nhà cung cấp dịch vụ email như Google hay Microsoft đều có những bộ lọc email spam/phishing để bảo vệ người dùng. Tuy nhiên những bộ lọc này hoạt động dựa trên việc kiểm tra văn bản (text) trong email để phát hiện xem email đó có phải phishing hay không. Hiểu được điều này, những kẻ tấn công đã cải tiến các chiến dịch tấn công Phishing lên một tầm cao mới. Chúng thường sử dụng ảnh hoặc video để truyền tải thông điệp lừa đảo thay vì dùng text như trước đây. Người dùng cần tuyệt đối cảnh giác với những nội dung này.</p>
+        <h2>Cách phòng chống Phishing</h2>
+        <ul>
+            <li>Cảnh giác với các email có xu hướng thúc giục bạn nhập thông tin nhạy cảm</li>
+            <li>Không click vào bất kỳ đường link nào được gửi qua email nếu bạn không chắc chắn 100% an toàn.</li>
+            <li>Không bao giờ gửi thông tin bí mật qua email.</li>
+            <li>Không trả lời những thư lừa đảo. Những kẻ gian lận thường gửi cho bạn số điện thoại để bạn gọi cho họ vì mục đích kinh doanh.</li>
+            <li>Sử dụng Tường lửa và phần mềm diệt virus. Hãy nhớ luôn cập nhật phiên bản mới nhất của các phần mềm này</li>
+            <li>Hãy chuyển tiếp các thư rác đến spam@uce.gov. Bạn cũng có thể gửi email tới reportphishing@antiphishing.org Tổ chức này giúp chống lại các phishing khác.</li>
+        </ul>
         `
     );
 }
@@ -192,10 +166,52 @@ function showtopic3() {
 }
 function showtopic4() {
     showtopic(
-        title = `How to "HACK" NASA ?`,
+        title = `Information Security Threats`,
         message = `
-        <h2>This content is empty!!!</h2>
-        <h2>Please don't hack any organization!</h2>
+        <h2>Động cơ, mục đích, mục tiêu của những cuộc tấn công bảo mật</h2>
+        <p>Trong thế giới của bảo mật, một kẻ tấn công (attacker) tấn công mục tiêu theo ba phần. “động cơ hoặc mục tiêu” (Motive or Objective) khiến cho kẻ tấn công tập trung vào tấn công một hệ thống riêng biệt. một thành phần khác được kẻ tấn công sử dụng phổ biến đó là Phương pháp (Method) nhằm có được quyền truy cập vào hệ thống đích. Ý định của kẻ tấn công cũng được các điểm yếu của hệ thống làm cho thành hiện thực. Ba thành phần đã nêu là những “viên gạch“ chính mà một cuộc tấn công cần.</p>
+        <p>Động cơ và mục tiêu (Motive and Objective) của cuộc tấn công vào một hệ thống có thể phụ thuộc vào thứ có giá trị bên trong hệ thống đặc thù đó. Lý do vì sao thì có thể là do “đạo đức” hoặc cũng có thể là do “vô đạo đức”. Tuy nhiên, điều dẫn tới nhiều mối hiểm nguy cho hệ thống, đó là tin tặc (hacker) cần phải có mục tiêu để đạt được. Một vài động cơ đặc trưng đứng sau các cuộc tấn công là nhằm đánh cắp thông tin, lôi kéo dữ liệu, chia rẽ, truyền bá tư tưởng chính trị hoặc tôn giáo, tổn hại đến danh tiếng của mục tiêu hoặc trả thù. Cách thức tấn công và những điểm yếu thì thường đi bên cạnh nhau. kẻ xâm nhập áp dụng hàng tá công cụ, hàng đống công nghệ – từ công nghệ cũ tới công nghệ hiện đại để khai thác điểm yếu trong hệ thống hoặc bảo mật để tạo ra các lỗ hổng và hiện thực hóa mục đích của mình.</p>
+        <h2>Phân loại các mối đe dọa bảo mật an toàn thông tin</h2>
+        <h4>Network Threats (Đe dọa mạng)</h4>
+        <p>Những thành phần chính của cơ sở cấu trúc mạng là đường truyền (routes), khóa (switches) và tường lửa (firewalls). Những thiết bị này không chỉ thực hiện việc truyền dẫn và vận hành mạng, mà chúng còn điều khiển và bảo vệ những ứng dụng, những máy chủ đang hoạt động khỏi các cuộc tấn công hoặc xâm nhập. Thiết bị với cấu trúc càng nghèo nàn, những kẻ xâm nhập càng có cơ hội để khai thác. Điểm yếu thường thấy của mạng máy tính bao gồm thiếu cài đặt thiết lập, truy cập mạng “thoáng”, mã hóa và mật khẩu yếu, thiết bị thiếu những bản vá bảo mật mới nhất. Những mối đe dọa mạng cao cấp nhất bao gồm:</p>
+        <ul>
+            <li>Thu thập thông tin (information gathering)</li>
+            <li>“Đánh hơi” và nghe trộm (Sniffing & Eavesdropping)</li>
+            <li>Lừa đảo, giả mạo (Spoofing)</li>
+            <li>Chiếm quyền kiểm soát phiên (Session hijacking)</li>
+            <li>Tấn công xen giữa (Man-in-the-middle attack)</li>
+            <li>Nhiễm độc DNS & ARP (DNS & ARP poisoning)</li>
+            <li>Tấn công Password-based (Password-based Attacks)</li>
+            <li>Tấn công từ chối dịch vụ (Denial-of-Services Attacks)</li>
+            <li>Tấn công phá mã khóa (Compromised Key Attacks)</li>
+            <li>Tấn công tường lửa và IDS (Firewall & IDS Attacks)</li>
+        </ul>
+        <h4>Host Threats (Mối đe dọa đến host)</h4>
+        <p>Host threats tập trung vào những phần mềm, ứng dụng hệ thống được cài đặt hoặc hoạt động vượt quá hệ thống đó như Window 2000, .NET Framework, SQL Server, và nhiều thứ khác. Những cấp độ nguy hiểm đến host bao gồm:</p>
+        <ul>
+            <li>Tấn công bằng phần mềm độc hại (Malware Attacks)</li>
+            <li>Lần mò dấu vết (Footprinting)</li>
+            <li>Tấn công mật khẩu (Password Attack)</li>
+            <li>Tấn công từ chối dịch vụ (Denial-of-Services Attacks)</li>
+            <li>Mã thực thi phá hoại (Arbitrary code execution)</li>
+            <li>Truy cập không được phép (Unauthorized Access)</li>
+            <li>Leo thang đặc quyền (Privilege escalation)</li>
+            <li>Tấn công “cửa sau” (Backdoor Attacks)</li>
+            <li>Tấn công bảo mật vật lí (Physical Security Threats)</li>
+        </ul>
+        <h4>Application Threats (Mối đe dọa ứng dụng)</h4>
+        <p>Để phân tích các mối đe dọa một các tốt nhất, ta phân chúng vào các loại tổn thương của ứng dụng:</p>
+        <ul>
+            <li>Dữ liệu không phù hợp / phê duyệt đầu vào (Improper Data/ Input Validation)</li>
+            <li>Tấn công xác thực và ủy quyền (Authentication & Authorization Attack)</li>
+            <li>Bảo mật bị mất định hình (Security Misconfiguration)</li>
+            <li>Hỏng hóc bộ quản lý phiên (Broken Session Management)</li>
+            <li>Lỗi tràn bộ nhớ đệm (Buffer Overflow issues)</li>
+            <li>Tấn công mật mã (Cryptography Attacks)</li>
+            <li>Lỗ hổng SQL (SQL Injection)</li>
+            <li>Xử lý lỗi và quản lý ngoại lệ (Improper error handling & exception Management)</li>
+        </ul>
+        <p>Xem chi tiết tại <a href="https://www.crf-blogger.gq/hacking/ceh-module-1-phan-2-cac-moi-de-doa-ve-bao-mat-va-attack-vectors/" target="_blank">https://www.crf-blogger.gq/hacking/ceh-module-1-phan-2-cac-moi-de-doa-ve-bao-mat-va-attack-vectors/</a></p>
         `
     );
 }
