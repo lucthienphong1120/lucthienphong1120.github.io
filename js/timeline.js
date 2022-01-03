@@ -3,7 +3,7 @@ var btn1 = document.getElementById('more-down');
 var btn2 = document.getElementById('more-up');
 var overlay = document.getElementById('more-overlay');
 var height = body.clientHeight;
-console.log(height);
+// console.log(height);
 if (height > 600) {
     btn1.style.display = 'block';
     body.style.height = '600px';
