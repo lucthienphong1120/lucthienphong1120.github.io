@@ -12,6 +12,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.disable-scroll {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
 h1 {
   font-size:70px;
   font-weight: bolder;
@@ -90,7 +95,7 @@ a:focus {
 
 .veried-logo {
   width: 24px;
-  margin-left: 16px;
+  margin-left: 10px;
 }
 
 .about,.skills,
@@ -119,7 +124,6 @@ a:focus {
   white-space: nowrap;
   overflow: hidden;
   width: 150px;
-  animation: type5 2s steps(40,end) 2s forwards;
 }
 
 .type-name {
@@ -135,7 +139,7 @@ a:focus {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid orange;
-  animation: shring 3s steps(40,end) 2.5s forwards, blink5 .5s step-end infinite alternate;
+  /* animation: shring 3s steps(40,end) 4.5s forwards, blink5 .5s step-end infinite alternate; */
 }
 
 @keyframes shring {
@@ -380,16 +384,13 @@ header hr {
   background-repeat: no-repeat;
   position: relative;
   height: 175px;
-  left: -5px;
   min-width: 165px;
 }
 .avatar-img {
   background: url(../images/avatar/2.png) no-repeat center center / cover;
-  /* background-repeat: no-repeat;
-  background-size: cover; */
   position: absolute;
-  top: 12px;
-  left: 17px;
+  top: 13px;
+  left: 18px;
   height: 115px;
   width: 115px;
   border-radius: 50%;
@@ -401,10 +402,13 @@ header hr {
   text-shadow: 0 0 5px black;
   box-shadow: 2px 2px 10px #241f1f;
   color: #f5f5f5;
+  padding-left: 20px;
+  padding-right: 0;
 }
 .skills-list li {
   width: 45%;
   margin: 5px;
+  padding-left: 10px;
   line-height: 16px;
   list-style: none;
   float: left;
@@ -423,7 +427,7 @@ header hr {
   font-size: 12px;
 }
 .rating-star i {
-  padding: 0 1px;
+  padding: 0 3px;
 }
 .rating-star .star-checked {
   color: #ffe400;
@@ -966,7 +970,7 @@ ul{
     flex-direction: column;
   }
   .skills-list li {
-    width: 95%;
+    width: 90%;
   }
   .profile-tittle {
     margin: 10px 0;
