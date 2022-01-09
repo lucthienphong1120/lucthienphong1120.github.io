@@ -245,7 +245,7 @@ a:focus {
 #announcement__content {
   position: absolute;
   width: 525px;
-  height: 250px;
+  height: 270px;
   padding: 10px;
   min-height: 200px;
   top: 50%;
@@ -269,7 +269,7 @@ a:focus {
 .announcement__header {
   font-size: 30px;
   margin-bottom: 25px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .announcement__text {
@@ -285,11 +285,11 @@ a:focus {
   outline: none;
   font-size: 18px;
   color: white;
-  padding: 10px 12px;
+  padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
   display: flex;
-  margin: 23px auto 5px;
+  margin: 35px auto 5px;
   align-items: center;
   font-size: 18px;
 }
