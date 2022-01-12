@@ -1,3 +1,8 @@
+
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault();
+}, false);
+
 jQuery(document).ready(function() {
     jQuery('body').bind('cut copy paste', function(e) {
         e.preventDefault();
