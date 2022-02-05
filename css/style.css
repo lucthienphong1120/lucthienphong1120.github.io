@@ -12,11 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.disable-scroll {
-  overflow-y: hidden;
-  height: 100vh;
-}
-
 h1 {
   font-size:70px;
   font-weight: bolder;
@@ -124,6 +119,7 @@ a:focus {
   white-space: nowrap;
   overflow: hidden;
   width: 150px;
+  animation: type5 2s steps(40,end) 1.5s forwards;
 }
 
 .type-name {
@@ -139,7 +135,7 @@ a:focus {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid orange;
-  /* animation: shring 3s steps(40,end) 4.5s forwards, blink5 .5s step-end infinite alternate; */
+  animation: shring 2.5s steps(40,end) 1.5s forwards, blink5 .5s step-end infinite alternate;
 }
 
 @keyframes shring {
@@ -229,78 +225,6 @@ a:focus {
   border-radius: 8px;
   top: 5px;
   left: 5px; 
-}
-
-/* announcement */
-#announcement {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 100;
-}
-
-#announcement__content {
-  position: absolute;
-  width: 525px;
-  height: 270px;
-  padding: 10px;
-  min-height: 200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: white;
-  border-radius: 5px;
-}
-
-#announcement__close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  font-size: 30px;
-  color: #333;
-  padding: 2px 12px;
-}
-
-.announcement__header {
-  font-size: 30px;
-  margin-bottom: 25px;
-  margin-top: 30px;
-}
-
-.announcement__text {
-  font-size: 18px;
-  line-height: 18px;
-  margin-bottom: 10px;
-}
-
-#announcement__ok {
-  text-decoration: none;
-  background-color: #3366CC;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  display: flex;
-  margin: 35px auto 5px;
-  align-items: center;
-  font-size: 18px;
-}
-
-#announcement__ok:hover {
-  opacity: 0.9;
-}
-
-#announcement__ok i {
-  margin-left: 5px;
-  margin-right: -3px;
 }
 
 @-webkit-keyframes sk-innerCircle {
