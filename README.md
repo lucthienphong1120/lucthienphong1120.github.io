@@ -1,3 +1,3 @@
 # My personal website
 
-https://www.ltp110.tk
+ https://prodev.lucthienphong.codes/

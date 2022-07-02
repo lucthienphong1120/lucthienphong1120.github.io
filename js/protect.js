@@ -1,18 +1,10 @@
 
-document.addEventListener("contextmenu", function(e){
+document.addEventListener("contextmenu", function(e){ // Prevent Right click
     e.preventDefault();
 }, false);
 
-jQuery(document).ready(function() {
-    jQuery('body').bind('cut copy paste', function(e) {
-        e.preventDefault();
-    });
-    jQuery("body").on("contextmenu", function(e) {
-        return false;
-    });
-});
-jQuery(document).keydown(function(event) {
-    if (event.keyCode == 123) {
+document.addEventListener("keydown", function (event){
+    if (event.keyCode == 123) { // Prevent F12
         return false;
     }
     if (event.ctrlKey && event.shiftKey && event.keyCode == 67) { // Prevent Ctrl+Shift+C
@@ -26,19 +18,7 @@ jQuery(document).keydown(function(event) {
     }
     if (event.ctrlKey && (event.keyCode === 85 || event.keyCode === 117)) { // Prevent Ctrl+U
         return false;
-    }
-});
-document.onkeydown = function(e) {
-    if (e.ctrlKey && (e.keydown === 85 || e.keydown === 117)) { // Prevent Ctrl+U or Ctrl+u
-        return false;
-    } else {
-        return true;
-    }
-};
-jQuery(document).keypress("u", function(e) {
-    if (e.ctrlKey) {
-        return false;
-    } else {
+    }   else {
         return true;
     }
 });
