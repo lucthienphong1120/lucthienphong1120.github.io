@@ -1,6 +1,6 @@
 # My personal website
 
-> Homepage: https://prodev.lucthienphong.codes/
+> Homepage: https://www.ltp110.tk/
 
 ## Screenshot
 
