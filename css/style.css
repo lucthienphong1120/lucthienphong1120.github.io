@@ -608,7 +608,7 @@ ul{
   left: calc(50% - 20px);
 }
 .more-info-item {
-  margin: 15px;
+  margin: 15px 10px;
 }
 .more-down-text {
   font-size: 30px;
