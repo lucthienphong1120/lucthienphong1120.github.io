@@ -381,10 +381,10 @@ header hr {
   background: #fff;
   box-shadow: rgb(36 31 31) 2px 2px 10px;
 }
-.achievements ul {
-  padding: 10px;
+.achievements i {
+  padding-right: 10px;
 }
-.achievements ul li {
+.achievements p {
   padding-bottom: 6px;
 }
 
