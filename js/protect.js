@@ -1,4 +1,3 @@
-
 document.addEventListener("contextmenu", function(e){ // Prevent Right click
     e.preventDefault();
 }, false);
@@ -7,18 +6,19 @@ document.addEventListener("keydown", function (event){
     if (event.keyCode == 123) { // Prevent F12
         return false;
     }
-    if (event.ctrlKey && event.shiftKey && event.keyCode == 67) { // Prevent Ctrl+Shift+C
+    else if (event.ctrlKey && event.shiftKey && event.keyCode == 67) { // Prevent Ctrl+Shift+C
         return false;
     }
-    if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I
+    else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I
         return false;
     }
-    if (event.ctrlKey && event.shiftKey && event.keyCode == 74) { // Prevent Ctrl+Shift+J
+    else if (event.ctrlKey && event.shiftKey && event.keyCode == 74) { // Prevent Ctrl+Shift+J
         return false;
     }
-    if (event.ctrlKey && (event.keyCode === 85 || event.keyCode === 117)) { // Prevent Ctrl+U
+    else if (event.ctrlKey && (event.keyCode === 85 || event.keyCode === 117)) { // Prevent Ctrl+U
         return false;
-    }   else {
+    }
+    else {
         return true;
     }
 });
