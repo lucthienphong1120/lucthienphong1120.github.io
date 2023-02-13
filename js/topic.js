@@ -58,7 +58,7 @@ function showtopic1() {
         <p>Code được tạo tự động mỗi lần địa chỉ được ghé thăm, vậy nên hãy nhớ rằng bạn đã đặt chúng thật độc đáo và an toàn khi sử dụng. Copy và paste văn bản từ trang web vào Notepad++ để thay thế những dòng này.</p>
         <p>Sau khi đã thực hiện các thay đổi trên, kích vào menu File và chọn Save As. Chỉnh sửa tên file thành “wp-config” (xóa đoạn “-sample”) và kích Save. Folder WordPress giờ đây đã sẵn sàng để đăng tải bài viết.</p>
         <h2>Trên đây là demo các bước thực hiện</h2>
-        <p>xem thêm <a href="https://www.crf-blogger.gq/huong-dan-tao-mot-blogger-nhu-toi-da-lam/" target="_blank">chi tiết</a> cách thực hiện</p>
+        <p>xem thêm <a href="https://blog.crfnetwork.cyou/huong-dan-tao-mot-blogger-nhu-toi-da-lam/" target="_blank">chi tiết</a> cách thực hiện</p>
         `
     );
 }

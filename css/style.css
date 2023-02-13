@@ -89,12 +89,8 @@ a:focus {
 }
 
 .main {
-  /* background-image: linear-gradient(45deg, #daa2fd, #c0fdff); */
-  background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
-  -webkit-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
-  -moz-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
-  -o-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
-  -ms-background: url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(73, 73, 255, 0.1)),
+    url(../images/tm-bg-slide-1.jpg) no-repeat center center fixed;
 }
 
 .more {
@@ -439,6 +435,9 @@ header hr {
 }
 
 /* contact section */
+#contact {
+  background: ghostwhite;
+}
 .contact {
   background: #fff;
   box-shadow: rgb(36 31 31) 2px 2px 10px;
@@ -670,6 +669,10 @@ li a:hover {
 }
 
 /* more */
+#about-me {
+  background: ghostwhite;
+}
+
 .more-body {
   background: white;
   border: 1px solid #ccc;
@@ -937,11 +940,12 @@ li a:hover {
 }
 
 .topic-item {
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 75%;
-  height: 50px;
+  height: 60px;
   border: 2px solid #ffe400;
   margin: 10px;
   padding: 10px;
@@ -949,7 +953,8 @@ li a:hover {
 }
 
 .topic-tittle {
-  font-size: 18px;
+  color: #fff;
+  font-size: 16px;
   margin-left: 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -957,16 +962,16 @@ li a:hover {
 }
 
 .topic-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 0px;
   cursor: pointer;
   width: 100px;
-  height: 25px;
+  height: 30px;
+  line-height: 30px;
   font-weight: bold;
-  border-radius: 25px;
+  border-radius: 10px;
   background-color: #ffe400;
-  color: black;
+  color: #333;
   text-shadow: none;
   -webkit-text-shadow: none;
   -moz-text-shadow: none;
@@ -975,8 +980,8 @@ li a:hover {
 }
 
 .topic-btn:hover {
-  background-color: black;
-  color: white;
+  background-color: #333;
+  color: #fff;
 }
 
 .topic-main {
@@ -992,6 +997,10 @@ li a:hover {
 
 #topic {
   font-family: 'themify';
+}
+
+#topic-blog {
+  background: whitesmoke;
 }
 
 #back-topic {
