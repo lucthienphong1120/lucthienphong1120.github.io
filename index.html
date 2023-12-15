@@ -1,1215 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⢀⠤⠒⠒⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⠀⠀⠀⠀  ⢀⡯⠴⠶⠶⠒⠢⢇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⠀⠀⠀⠀  ⡎⡤⠖⠂⡀⠒⡢⡌⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣷⠯⢭⣵⠑⣯⡭⢹⡎⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡆⠀⢠⣤⠄⠀⣸⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣷⢄⣈⣟⢁⢴⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⠀⠀⠀⣀⢴⠒⡝⠁⠬⠛⣚⡩⠔⠉⢻⠒⣦⢄⠀⠀⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⠀⢀⢎⠁⡌⢰⠁⠀⠀⠀⠀⠀⠀⠀⢸⠀⡛⠀⡷⡀⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⣀⣾⣷⣠⠃⢸⠀⠀⠀⠀⠀⠀⠀⠀⣸⠀⢹⢰⠁⢳⠀⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⢸⡿⠟⢿⢳⡏⠀⠀⠀⠀⠀⠀⠀⢠⡟⣶⣘⢞⡀⠘⡆⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⡼⢺⣯⢹⢰⡏⠒⠒⠒⠊⠀⠐⢒⣾⣹⣸⢹⣾⡇⠀⢣⠀⠀⠀⠀⠀
-	⠀⠀⠀⠀⣏⣾⠃⠀⣼⡟⣢⣀⡠⠤⣀⡰⢋⡝⣱⣹⠇⣿⣧⣴⠸⡄⠀⠀⠀⠀
-	⠀⠀⠀⠀⡏⡞⡆⢠⡇⣟⠭⡒⠭⠭⠤⠒⣡⠔⣽⡇⣂⣿⠟⠃⢀⡇⠀⠀⠀⠀
-	⠀⠀⠀⠀⢧⡇⡧⢫⠃⣷⣽⣒⣍⣉⣈⡩⢴⠾⡳⢡⢸⣛⣪⡗⢴⠁⠀⠀⠀⠀
-	⠀⠀⠀⠀⣼⢃⠷⣸⣤⣯⢞⡥⢍⣐⣂⠨⠅⠊⡠⢃⣟⢏⠹⣎⣆⡀⠀⠀⠀⠀
-	⠀⡠⠶⠚⠛⠛⠽⢹⡟⡖⢓⠿⣝⠓⠒⠒⠒⠭⢤⠗⣯⣩⣽⣿⠷⣾⣿⢷⣆⠀
-	⠜⣌⠢⢄⣀⡀⠀⡞⢡⠘⢄⠑⠨⢉⣀⠉⣀⠄⢊⠜⡸⠛⣿⡍⠉⠉⠈⢁⠁⠇
-	⠈⢯⡓⠦⠤⠬⠭⣵⠀⠱⢄⠑⠲⠤⠤⠤⠤⠒⢁⡔⠁⢠⣏⣡⣤⣤⡶⠜⣻⠃
-	⠀⠈⠙⠛⠒⠛⠻⠯⠕⠤⣀⣉⣓⣒⣂⣒⣒⣊⣁⣠⠔⠛⠂⠒⠛⠓⠛⠚⠉⠀
-	=====`-.____`.___ \_____/___.-`___.-'=====
-                         `=---='
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-	    Phật phù hộ, code không bao giờ BUG
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
--->
+
 <head>
-	<meta charset="utf-8">
-	<title>Luc Thien Phong - Biography</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="./images/logo.jpg" type="image/x-icon">
-	<meta property="og:title" content="Luc Thien Phong - Biography">
-	<meta property="og:description" content="Luc Thien Phong - Biography">
-	<meta property="og:image" content="./images/logo.jpg">
-	<meta property="og:url" content="https://ltp.crfnetwork.cyou">
-	<meta property="og:type" content="website">
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<link rel="stylesheet" href="./css/font-awesome.min.css">
-	<link rel="stylesheet" href="./css/aos.css">
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-		integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- <script src="./js/protect.js"></script> -->
+    <meta charset="utf-8">
+    <title>Luc Thien Phong - Biography</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.jpg" type="image/x-icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="./lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./lib/lightbox/css/lightbox.min.css">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body data-spy="scroll" data-target=".navbar-collapse" class="disable-scroll">
-	<!-- preloader section -->
-	<div class="preloader">
-		<div class="sk-spinner sk-spinner-wordpress">
-			<span class="sk-inner-circle"></span>
-		</div>
-	</div>
-	<!-- main -->
-	<div class="main">
-		<section id="home" style="margin: -15px 0;">
-			<!-- Navbar -->
-			<div id="header-navbar">
-				<ul class="navbar" style="margin: 0; border: 0; list-style: none;">
-					<li class="navbar-brand">
-						<a href="#">
-							<i class="fa fa-home" style="font-size: 150%;"></i>
-						</a>
-					</li>
-					<li class="navbar-brand">
-						<a href="#profile">Profile</a>
-					</li>
-					<li class="navbar-brand">
-						<a href="#contact">Contact</a>
-					</li>
-					<li class="navbar-brand navbar-brand-notuse">
-						<a href="https://www.linkedin.com/in/ltp1120/" target="_blank">
-							LinkedIn
-							<i class="fa fa-user"></i>
-						</a>
-					</li>
-					<li class="navbar-brand navbar-brand-notuse">
-						<a href="https://blog.crfnetwork.cyou/" target="_blank">
-							My blog
-							<i class="fa fa-edit"></i>
-						</a>
-					</li>
-					<li class="navbar-brand navbar-brand-notuse">
-						<a href="https://ltp.crfnetwork.cyou/gallery/" target="_blank">
-							My certificate
-							<i class="fa fa-certificate"></i>
-						</a>
-					</li>
-					<li class="navbar-brand navbar-brand-notuse"><a
-							href="https://www.facebook.com/profile.php?id=100045406261491" target="_blank">
-							<span class="mobile-icon-name">Facebook</span>
-							<i class="fa fa-facebook"></i>
-						</a>
-					</li>
-					<li class="navbar-brand navbar-brand-notuse">
-						<a href="https://www.youtube.com/CodingReshapeFuture" target="_blank">
-							<span class="mobile-icon-name">Youtube</span>
-							<i class="fa fa-youtube"></i>
-						</a>
-					</li>
-					<li class="navbar-brand navbar-brand-notuse">
-						<a href="https://github.com/lucthienphong1120" target="_blank">
-							<span class="mobile-icon-name">Github</span>
-							<i class="fa fa-github"></i>
-						</a>
-					</li>
-				</ul>
-				<!-- Menu -->
-				<div id="menu-btn" class="menu">
-					<i class="menu-icon ti-menu"></i>
-				</div>
-			</div>
-			<!-- header section -->
-			<header class="masthead">
-				<div class="container">
-					<div class="type5">
-						<p class="type-title">Hello, we are</p>
-						<p class="type-name">CODING RESHAPE FUTURE</p>
-					</div>
-					<h2 style="color: white; ">Welcome To Our Studio!</h2>
-				</div>
-			</header>
-		</section>
-		<div id="profile" style="height: 50px;"></div>
-		<!-- about and skills section -->
-		<section class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-12">
-					<div class="about" data-aos="fade-right" data-aos-duration="500" data-aos-easing="ease-in-sine">
-						<h3 class="profile-tittle accent" style="margin: 5px 0 0;">Easy Profile</h3>
-						<div style="display: flex; align-items: baseline;font-family: 'FontAwesome';">
-							<h2 style="margin: 15px 0;">Lục Thiên Phong</h2>
-							<img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-								class="veried-logo">
-						</div>
-						<div class="about-info">
-							<div style="flex: 1;">
-								<div class="avatar-layout">
-									<div class="avatar-img"></div>
-								</div>
-							</div>
-							<ul style="flex: 2; font-family: 'FontAwesome';">
-								<li>
-									My real name is <span class="focus-blue">Nguyen Duc Chung</span>,
-									everyone usually call my nickname
-									is <span class="focus-blue">Luc Thien Phong</span>.
-								</li>
-								<li>
-									That's a name that has stuck with me through many events, ups and downs in life.
-								</li>
-								<li>
-									I was born in <span class="focus-blue">2003</span> (<span id="year"></span> years
-									old).
-								</li>
-								<li>
-									Currently I'm <span class="focus-blue">a full stack web developer,
-										a systems engineer, a game developer,
-										a security operator, a blogger and a youtuber.</span>.
-								</li>
-								<li>
-									Now, my purpose is to become <span class="focus-blue">an Ethical Hacker</span>
-									- an information security (infosec) expert.
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-12">
-					<div class="skills" data-aos="flip-left" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
-						<h2 class="white">Skills</h2>
-						<div>
-							<ul class="skills-list">
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/C.svg">
-										C
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/Cplus.svg">
-										C++
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/Python.svg">
-										Python3
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/sql.svg">
-										SQL
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/postgresql.svg">
-										PostgreSQL
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/Java.svg">
-										Java
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/JS.svg">
-										JavaScript
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/html5.svg">
-										HTML5
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/CSS.svg">
-										CSS3
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/Bootstrap.svg">
-										Bootstrap
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/terminal.svg">
-										Terminal
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/Windows.svg">
-										Windows
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/linux.svg">
-										Linux
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/kali.svg">
-										Kali Linux
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/markdown.svg">
-										MarkDown
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-									</div>
-								</li>
-								<li class="skills-item">
-									<div>
-										<img src="./images/skill/php.svg">
-										PHP
-									</div>
-									<div class="rating-star">
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-checked fa fa-star"></i>
-										<i class="star-uncheck fa fa-star"></i>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+        <a href="./index.html" class="navbar-brand ml-lg-3">
+            <h1 class="m-0 display-5"><span class="text-primary">CRF</span>LTP</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-0">
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skill</a>
+                <a href="#work" class="nav-item nav-link">Work</a>
+                <a href="#certify" class="nav-item nav-link">Certify</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <a href="#social" class="nav-item nav-link">Social</a>
+            </div>
+            <a href="https://github.com/lucthienphong1120" class="btn btn-outline-primary d-none d-lg-block">
+                <i class="fab fa-github mr-2"></i>
+                My Github
+            </a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
-		<!-- learning and languages -->
-		<section class="container">
-			<div class="row">
-				<div class="col-md-8 col-sm-12">
-					<div class="learning" data-aos="fade-down-right" data-aos-duration="1500">
-						<h2 class="white">Learning</h2>
-						<div class="learning-content">
-							<h4 class="learning-title accent">Network Administration and System Security</h4>
-							<div class="learning-school">
-								<h5>Study Time</h5>
-								<span></span><span></span>
-								<h5>2021 September - 2024 December</h5>
-							</div>
-							<ul class="learning-description" style="font-family: 'FontAwesome'; padding-left: 20px;">
-								<li>
-									Have good skills in system management, network, penetration testing, cyber attack
-									and defense,...
-								</li>
-								<li>
-									Good understanding network map, database design, Object-Oriented Analysis and
-									Design,...
-								</li>
-								<li>
-									Good time management, presentation and teamwork skills,...
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 col-sm-12">
-					<div class="achievements" data-aos="fade-up-left" data-aos-duration="1500">
-						<h2>Profiles of learning</h2>
-						<p>
-							<i style="color: #00bf00;" class="fa fa-check-circle"></i>
-							<a href="https://github.com/lucthienphong1120">GitHub</a>
-						</p>
-						<p>
-							<i style="color: #00bf00;" class="fa fa-check-circle"></i>
-							<a href="https://codelearn.io/profile/9600509">Code Learn</a>
-						</p>
-						<p>
-							<i style="color: #00bf00;" class="fa fa-check-circle"></i>
-							<a href="https://www.youtube.com/c/CodingReshapeFuture">Youtube 1</a>
-						</p>
-						<p>
-							<i style="color: #00bf00;" class="fa fa-check-circle"></i>
-							<a href="https://www.youtube.com/c/CRFCommunity">Youtube 2</a>
-						</p>
-						<p>
-							<i style="color: #00bf00;" class="fa fa-check-circle"></i>
-							<a href="https://tryhackme.com/p/lucthienphong112">TryHackMe</a>
-						</p>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
+    <!-- About Start -->
+    <div class="container-fluid py-5" id="about">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 pb-4 pb-lg-0">
+                    <img class="img-fluid rounded w-100" src="./img/about.png" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="mb-2">Hello, I'm</h3>
+                    <h1 class="display-4 text-uppercase text-primary mb-2">Luc Thien Phong</h1>
+                    <h1 class="typed-text-output d-inline font-weight-lighter"></h1>
+                    <div class="typed-text d-none">Full Stack Web Developer, Systems Engineer, DevSecOps Engineer</div>
 
-		<!-- contact and experience -->
-		<section class="container">
-			<div class="row">
-				<div class="col-md-4 col-sm-12">
-					<div class="contact" data-aos="flip-left" data-aos-duration="1500">
-						<h2>Contact</h2>
-						<p><i class="fa fa-map-marker"></i> Hanoi, Vietnam, Asian</p>
-						<p><i class="fa fa-phone"></i> +84 967 56 3080</p>
-						<p><i class="fa fa-envelope"></i> ltp@crfnetwork.cyou</p>
-						<p>
-							<i class="fa fa-wordpress"></i>
-							<a href="https://ltp.crfnetwork.cyou/">
-								https://ltp.crfnetwork.cyou/
-							</a>
-						</p>
-						<p>
-							<i class="fa fa-wordpress"></i>
-							<a href="https://blog.crfnetwork.cyou/">
-								https://blog.crfnetwork.cyou/
-							</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-md-8 col-sm-12" style="padding-bottom: 30px;">
-					<div class="experience" style="padding-bottom: 0;" data-aos="fade-left" data-aos-duration="1500">
-						<h2 class="white">Experiences</h2>
-						<div class="experience-content">
-							<h4 class="experience-title accent" style="text-shadow: 0 0 1px black;">A Full Stack
-								Developer - A Blogger</h4>
-							<h5>CodingReshapeFuture Company</h5>
-							<span></span><span></span>
-							<h5>
-								Copyright 2021
-								<i style="color: #00bf00;" class="fa fa-check-circle"></i>
-							</h5>
-							<p style="font-family: 'FontAwesome'" class="experience-description">
-								<a href="https://blog.crfnetwork.cyou/" target="_blank" class="intro-blog">
-									Ghé thăm Blog của tôi nhé!
-									<i class="intro-icon fa fa-edit"></i>
-								</a>
-								<a href="https://www.youtube.com/CodingReshapeFuture" target="_blank"
-									class="intro-youtube">
-									Kênh Youtube mà tôi học
-									<i class="intro-icon fa fa-youtube"></i>
-								</a>
-								<a href="https://www.linkedin.com/in/ltp1120/" target="_blank" class="intro-linkedin">
-									Xem profile trên Linkedin
-									<i class="intro-icon fa fa-linkedin"></i>
-								</a>
-								<a href="https://www.facebook.com/profile.php?id=100045406261491" target="_blank"
-									class="intro-facebook">
-									Liên hệ Facebook
-									<i class="intro-icon fa fa-facebook"></i>
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	</div>
-	<div class="more">
-		<div id="about-me" class="more-body" style="font-family: 'FontAwesome';">
-			<div class="container" data-aos="fade-up" data-aos-duration="1500">
-				<div class="more-title">
-					<h2>About me</h2>
-					<p>
-						<span class="focus-red">
-							I want to help everyone, who are lost their way, but not those take advantage of me!
-						</span>
-					</p>
-				</div>
-				<div class="content">
-					<h3>
-						<span class="focus-blue">
-							Security & EH
-						</span>
-					</h3>
-					<p>
-						<span class="focus-red">
-							There is a crack in everything, that's where the light gets in.
-						</span>
-					</p>
-					<div class="row">
-						<div class="col-lg-6">
-							<ul>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Birthday:</strong>
-									<span>24/08/2003</span>
-								</li>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Website:</strong>
-									<span>https://ltp.crfnetwork.cyou/</span>
-								</li>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Phone:</strong>
-									<span>+849 6756 3080</span>
-								</li>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Address:</strong>
-									<span>Hoàn Kiếm, Hà Nội, Việt Nam</span>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-6">
-							<ul>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Email:</strong>
-									<span>lucthienphong1120@gmail.com</span>
-								</li>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Relationship:</strong>
-									<span>Single</span>
-								</li>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Role:</strong>
-									<span>Leader CRF Team</span>
-								</li>
-								<li class="more-info-item">
-									<i class="ti-angle-right" style="font-size: 12px;"></i>
-									<strong>Certification:</strong>
-									<span>https://ltp.crfnetwork.cyou/gallery/</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="timeline" class="more-body" style="font-family: 'FontAwesome';">
-			<div class="container" data-aos="fade-right" data-aos-duration="1500">
-				<div class="more-title">
-					<h2>Leaning time</h2>
-					<h6>
-						Đây là thời gian học tập của tôi
-					</h6>
-				</div>
-				<div class="content">
-					<div class="row">
-						<div class="col-lg-6">
-							<h2>Lập trình</h2>
-							<ul style="list-style: none; padding-left: 8px; padding-top: 5px;">
-								<li class="resume-item">
-									<span class="focus-blue">
-										2020 - C#/Unity
-									</span>
-									<div class="bonus-info">
-										Trước đây tôi có học qua về Game developer, nhưng đã dừng lại
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										8/2021 - C
-									</span>
-									<div class="bonus-info">
-										Ngôn ngữ đầu tiên tôi học sau khi tốt nghiệp cấp 3<br>
-										Lần đầu tiên bước chân vào con đường lập trình
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										9/2021 - Python
-									</span>
-									<div class="bonus-info">
-										Có học qua về Python và đã quên gần hết
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										9/2021 - HTML5, CSS3, JavaScript
-									</span>
-									<div class="bonus-info">
-										Tôi có học sơ qua về web developer
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										10/2021 - Bootstrap 4
-									</span>
-									<div class="bonus-info">
-										Tất nhiên rồi, để làm web chứ
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										10/2021 - SQL, PostgreSQL,...
-									</span>
-									<div class="bonus-info">
-										Học về các RDBMS
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										10/2021 - Terminal
-									</span>
-									<div class="bonus-info">
-										Thành thạo môi trường windows
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										11/2021 - C++
-									</span>
-									<div class="bonus-info">
-										Chính thức bắt đầu học C++<br>
-										dù trước đó tôi đã làm được nhiều đồ án bằng C++
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										12/2021 - MOS
-									</span>
-									<div class="bonus-info">
-										Học Microsoft Office Specialist về 4 công cụ<br>
-										Microsoft Office, Excel, Powerpoint và Outlook
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										11/2021 - Linux
-									</span>
-									<div class="bonus-info">
-										Học về quản trị Linux<br>
-										Cent OS, Linux Mint, Kali Linux
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										12/2021 - CEH v10
-									</span>
-									<div class="bonus-info">
-										Đọc và dịch tài liệu CEH v10 (kéo dài đến 5/2022)
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										1/2022 - JavaScript
-									</span>
-									<div class="bonus-info">
-										Học về JS và thao tác dữ liệu với API
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										2/2022 - WordPress
-									</span>
-									<div class="bonus-info">
-										Học học xây dựng web, quản lý nội dung,<br>
-										Thành thạo 1 số dự án web lớn nhỏ với WordPress
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										3/2022 - MarkDown
-									</span>
-									<div class="bonus-info">
-										Học ngôn ngữ đánh dấu rút gọn MarkDown
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										4/2022 - Marketing
-									</span>
-									<div class="bonus-info">
-										Học digital marketing, lập kế hoạch và sử dụng<br>
-										một số công cụ DM trong chiến lược kinh doanh số, thúc đẩy SEO
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										4/2022 - Photoshop
-									</span>
-									<div class="bonus-info">
-										Học thiết kế đồ hoạ cơ bản, chỉnh sửa ảnh, banner quảng cáo
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										5/2022 - PHP, Regex, Batch, Bash
-									</span>
-									<div class="bonus-info">
-										Tìm hiểu, lập trình về 1 số ngôn ngữ lập trình, kịch bản
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										7/2022 - Writeups
-									</span>
-									<div class="bonus-info">
-										Tập viết writeups, blog, documents về Bảo mật, CRF, Tools, Hacking,...
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										8/2022 - Java
-									</span>
-									<div class="bonus-info">
-										Học lập trình hướng đối tượng, lập trình quản lý sự kiện với Java
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										9/2022 - Pygame
-									</span>
-									<div class="bonus-info">
-										Học và nghiên cứu 1 số dự án về Pygame
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										10/2022-1/2023 - Database
-									</span>
-									<div class="bonus-info">
-										Học quản lý, kết nối mô hình CSDL MySQL, SQL Server, MariaDB
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										12/2022 - Front-end libraries
-									</span>
-									<div class="bonus-info">
-										Nghiên cứu về 1 số thư viện, extensions, addons, plugins về Front-end
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										1/2023 - Basic Back-end
-									</span>
-									<div class="bonus-info">
-										Làm chủ kiến thức PHP Template Inheritance, Bootstrap, JS libraries<br>
-										để làm big project Back-end MobileShop hoàn chỉnh
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										3/2023 - CCNA
-									</span>
-									<div class="bonus-info">
-										Học Cisco Certified Network Associate 3 kỳ ITN, ENSA, SRWE<br>
-										và thiết kế một mô hình mạng doanh nghiệp hoàn chỉnh
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										4/2023 - LPI
-									</span>
-									<div class="bonus-info">
-										Học Linux Professional Institute<br>
-										thiết kế, quản trị, bảo mật Linux Server trên CentOS 7
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										5/2023 - Hardware core
-									</span>
-									<div class="bonus-info">
-										Học và tìm hiểu về 1 số hệ điều hành hoạt động<br>
-										cách phần cứng máy tính vận hành, xử lý và giao tiếp với nhau
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										6/2023 - Network Programming
-									</span>
-									<div class="bonus-info">
-										Lập trình mạng với Java Socket<br>
-										Bảo vệ đồ án nhóm về Chat Socket qua mạng
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										6/2023 - Azure
-									</span>
-									<div class="bonus-info">
-										Tự học về Cloud và luyện thi chứng chỉ Azure<br>
-										2 chứng chỉ AZ-900 Fundamentals và SC-900 Security
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										7/2023 - Unity
-									</span>
-									<div class="bonus-info">
-										Học về Unity để thiết kế và lập trình game 2D<br>
-										phát triển ứng dụng game cloud và 3 dự án thực tế
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										11/2023 - Splunk
-									</span>
-									<div class="bonus-info">
-										Tìm hiểu và ôn thi SIEM Splunk Core Power User<br>
-										và Splunk Sale Engineer Partner program
-									</div>
-								</li>
-							</ul>
+                    <p>My real name is Nguyen Duc Chung, everyone usually call my nickname is Luc Thien Phong.
+                        That's a name that has stuck with me through many events, ups and downs in life.</p>
+                    <div class="row mb-3">
+                        <div class="col-sm-6 py-2">
+                            <h6>Birthday: <span class="text-secondary">24th August 2003</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Address: <span class="text-secondary">Hoan Kiem, Hanoi, Vietnam</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Degree: <span class="text-secondary">Bachelor & BTEC</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Experience: <span class="text-secondary">5+ Years Exp</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Role: <span class="text-secondary">Leader of CRF Team</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Email: <span class="text-secondary">admin@crfnetwork.com</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Phone: <span class="text-secondary">+84 967 56 3080</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Freelance: <span class="text-secondary">Available</span></h6>
+                        </div>
+                    </div>
+                    <a href="https://github.com/lucthienphong1120" class="btn btn-outline-primary mr-4">
+                        <i class="fab fa-github mr-2"></i>
+                        My Github
+                    </a>
+                    <a href="https://blog.crfnetwork.com" class="btn btn-outline-primary">
+                        <i class="fa fa-rss mr-2"></i>
+                        My Blog
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
 
-						</div>
-						<div class="col-lg-6">
-							<h2>Học vấn</h2>
-							<ul style="list-style: none; padding-left: 8px; padding-top: 5px;">
-								<li class="resume-item">
-									<span class="focus-blue">
-										2003 - Tôi sinh ra
-									</span>
-									<div class="bonus-info">
-										12 năm liền học sinh giỏi toàn diện
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										2014 - THCS Thịnh Liệt
-									</span>
-									<div class="bonus-info">
-										2 năm liền thi HSG lý, hoá cấp quận
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										2018 - THPT Trương Định
-									</span>
-									<div class="bonus-info">
-										3 năm liền đạt kiện tướng mùa thi<br>
-										2 năm liền thi HSG lý cấp thành phố
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										2018 - PACT Team
-									</span>
-									<div class="bonus-info">
-										Manager PACT Team (after 2 friends)<br>
-										12 thành viên, gồm các bạn bè rất giỏi về CNTT
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										8/2021 - Học Viện Code Learn
-									</span>
-									<div class="bonus-info">
-										Bắt đầu học lập trình tại CodeLearn<br>
-										Ngôn ngữ đầu tiên tôi học là C
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										8/2021 - Lập trình không khó
-									</span>
-									<div class="bonus-info">
-										Tôi học thêm về C ở đây<br>
-										Trang dạy rất hay và bổ ích
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										9/2021 - Freetut, Quantrimang, Viettuts
-									</span>
-									<div class="bonus-info">
-										Những kho tài liệu về C/C++ dồi dào
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										9/2021 - Coding ReShape Future
-									</span>
-									<div class="bonus-info">
-										Leader, Founder tại CRF - Coding Reshape Future Co. LTD<br>
-										Mentor, định hướng cho các bạn mới tham gia lập trình, hỗ trợ về CNTT
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										9/2021 - Bach Khoa Information Technology Academy
-									</span>
-									<div class="bonus-info">
-										Học Network Administration & System Security bằng<br>
-										BTEC Higher National Diploma Level 5 in Computing (Network Engineering)
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										9/2021 - HowKteam
-									</span>
-									<div class="bonus-info">
-										Học qua Python tại HowKteam
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										10/2021 - F8
-									</span>
-									<div class="bonus-info">
-										Tôi học Front-end web tại F8
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										12/2021 - Udemy
-									</span>
-									<div class="bonus-info">
-										Tôi bỏ ra hơn 50 000$ để học các khoá học chứng chỉ trên Udemy
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										3/2022 - Cybrary
-									</span>
-									<div class="bonus-info">
-										Học nền tảng về an ninh mạng tại Cybrary
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										4/2022 - English ... English and English
-									</span>
-									<div class="bonus-info">
-										I try to learn English ultil it enought for my learning (about 1 years)
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										5/2022 - Tryhackme
-									</span>
-									<div class="bonus-info">
-										Học Network concept, Security, Linux<br>
-										Các tài liệu và bài Lab ở đây rất hữu ích
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										6/2022 - CRF Education
-									</span>
-									<div class="bonus-info">
-										Instructor tại CRF Edu
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										7/2022 - Fortinet
-									</span>
-									<div class="bonus-info">
-										Học chứng chỉ Network Security Expert (NSE) tại Fortinet
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										8/2022 - CRF Community
-									</span>
-									<div class="bonus-info">
-										Mở rộng quy mô, xây dựng cộng đồng cho CRF Community
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										10/2022 - NIC x Google
-									</span>
-									<div class="bonus-info">
-										Tham gia chương trình đào tạo chứng chỉ CNTT được tài trợ bởi NIC x Google
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										10/2022-6/2023 - Học Viện Sáng Tạo Công Nghệ TEKY
-									</span>
-									<div class="bonus-info">
-										Giảng viên STEAM và hỗ trợ các cuộc thi, sự kiện lớn về<br>
-										khoa học, công nghệ, lập trình
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										1/2023-6/2023 - CyberKid
-									</span>
-									<div class="bonus-info">
-										Tình nguyện viên hỗ trợ dự án tại CyberKid Vietnam<br>
-										Giảng dạy các lớp học An toàn trên không gian mạng cho học sinh<br>
-										tại các trường học trên toàn địa bàn Hà Nội
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										4/2023 - Tin học trẻ
-									</span>
-									<div class="bonus-info">
-										Giám thị, trông thi và phối hợp với đoàn quận Long Biên<br>
-										và quận Tây Hồ hỗ trợ tổ chức 2 sự kiện tin học trẻ
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										1/2023-5/2023 - MindX Technology School
-									</span>
-									<div class="bonus-info">
-										Trợ giảng/Giáo viên về các bộ môn công nghệ, lập trình Web
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										2/2023 - CRF Network
-									</span>
-									<div class="bonus-info">
-										Chính thức ký hợp đồng tên miền 10 năm với NameCheap<br>
-										tất cả các nền tảng CRF chuyển về crfnetwork.cyou (free domain for member)
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										5/2023 - ICANTECH
-									</span>
-									<div class="bonus-info">
-										Giảng viên lập trình online tại ICANTECH<br>
-										công ty thuộc hệ thống giáo dục hocmai.vn
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										5/2023 - Microsoft x VNG
-									</span>
-									<div class="bonus-info">
-										Được học bổng Game Dev của Microsoft Azure và VNG<br>
-										Học về Cloud Game & Game Design upload XBox verify
-									</div>
-								</li>
-								<li class="resume-item">
-									<span class="focus-blue">
-										11/2023 - VSEC
-									</span>
-									<div class="bonus-info">
-										Thực tập sinh DevOps tại phòng công nghệ VSEC<br>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- More button -->
-			<div id="more-overlay" class="more-overlay"></div>
-			<div id="more-down" class="more-btn" style="bottom: 50px;">
-				<div class="more-down-text">Mở rộng</div>
-				<i class="more-down-btn fa fa-chevron-down"></i>
-			</div>
-			<a href="#contact" id="more-up" class="more-btn">
-				<div class="fa fa-chevron-circle-up"></div>
-			</a>
-		</div>
-		<div id="contact" class="more-body" style="padding-top: 40px; font-family: 'FontAwesome';">
-			<div class="container">
-				<div class="more-title">
-					<h2>Liên hệ</h2>
-					<h6>
-						Đây là cách bạn có thể liên hệ với tôi
-					</h6>
-				</div>
-				<div class="content">
-					<div class="row">
-						<div class="col-lg-12 mt-5 mt-lg-0">
-							<form action="javascript:sendmail()" method="post" role="form" class="php-email-form">
-								<div class="row">
-									<div class="col-md-6 form-group">
-										<input type="text" name="Name" class="form-control" id="Name"
-											placeholder="Tên của bạn" required>
-									</div>
-									<div class="col-md-6 form-group mt-3 mt-md-0">
-										<input type="email" class="form-control" name="Email" id="Email"
-											placeholder="Địa chỉ mail" required>
-									</div>
-								</div>
-								<div class="form-group mt-3">
-									<input type="text" class="form-control" name="Subject" id="Subject"
-										placeholder="Tiêu đề" required>
-								</div>
-								<div class="form-group mt-3">
-									<textarea class="form-control" name="Message" rows="5"
-										placeholder="Nội dung tin nhắn" required></textarea>
-								</div>
-								<div class="text-center"><button type="submit">Gửi đi</button></div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="topic-blog" class="more-body" style="font-family: 'FontAwesome';">
-			<div class="container" data-aos="fade-left" data-aos-duration="1500">
-				<div class="more-title">
-					<h2>Topic</h2>
-					<h6>
-						Ở đây có vài topic nhỏ bạn có thể đọc
-					</h6>
-				</div>
-				<div class="content">
-					<div>
-						<h2 style="border-left: 5px solid #a0aec0; padding: 15px">All Posts</h2>
-						<ul class="topic-list">
-							<li class="topic-item">
-								<div class="topic-tittle">How did i build this blog ?</div>
-								<a href="#" class="topic-btn" onclick="showtopic1()">Blog</a>
-							</li>
-							<li class="topic-item">
-								<div class="topic-tittle">What is phishing ? How to hack facebook ?</div>
-								<a href="#" class="topic-btn" onclick="showtopic2()">Phishing</a>
-							</li>
-							<li class="topic-item">
-								<div class="topic-tittle">5 ways to learn English</div>
-								<a href="#" class="topic-btn" onclick="showtopic3()">English</a>
-							</li>
-							<li class="topic-item">
-								<div class="topic-tittle">How to "HACK" NASA ?</div>
-								<a href="#" class="topic-btn" onclick="showtopic4()">Hack</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="toast"></div>
-	<div id="topic"></div>
-	<!-- footer section -->
-	<footer>
-		<h2>CODING RESHAPE FUTURE</h2>
-		<h4 style="font-family: 'themify';">Lục Thiên Phong</h4>
-		<div class="footer-learning" style="margin-bottom: 5px;">License: the content based on 90% truth, refer to
-			SilverBoss, VtxTeam, Codelearn and Vietrux landing</div>
-		<div class="social-list">
-			<a href="https://www.facebook.com/profile.php?id=100045406261491" target="_blank"><i
-					class="ti-facebook"></i></a>
-			<a href="https://www.youtube.com/CodingReshapeFuture" target="_blank"><i class="ti-youtube"></i></a>
-			<a href="https://github.com/lucthienphong1120" target="_blank"><i class="ti-github"></i></a>
-			<a href="mailto:lucthienphong1120@gmail.com" target="_blank"><i class="ti-google"></i></a>
-			<a href="https://www.linkedin.com/in/ltp1120/" target="_blank"><i class="ti-linkedin"></i></a>
-		</div>
-		<p class="copyright">© 2021 copyright by <a href="https://www.facebook.com/profile.php?id=100045406261491"
-				target="_blank">LTP</a> All rights reserved</p>
-		<div class="footer-learning">-- this website build with HTML, CSS, JavaScript and Bootstrap 4 --</div>
-	</footer>
+    <!-- Skill Start -->
+    <div class="container-fluid py-5" id="skill">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            </div>
+            <div class="col-12 text-center mb-2">
+                <a class="border-bottom border-primary text-decoration-none text-danger" href="#social">
+                    View details on my socials
+                </a>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Front-end</h6>
+                            <h6 class="font-weight-bold">95%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Back-end</h6>
+                            <h6 class="font-weight-bold">70%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">DevSecOps</h6>
+                            <h6 class="font-weight-bold">85%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Marketing</h6>
+                            <h6 class="font-weight-bold">75%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Cloud</h6>
+                            <h6 class="font-weight-bold">80%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="font-weight-bold">Security</h6>
+                            <h6 class="font-weight-bold">90%</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Skill End -->
 
-	<!-- javascript js -->
-	<script src="./js/jquery.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/jquery.backstretch.min.js"></script>
-	<script src="./js/custom.js"></script>
-	<script src="./js/aos.js"></script>
-	<script src="./js/menu.js"></script>
-	<script src="./js/timeline.js"></script>
-	<script src="./js/form.js"></script>
-	<script src="./js/toast.js"></script>
-	<script src="./js/topic.js"></script>
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	<script>
-		AOS.init();
-	</script>
+    <!-- Work Start -->
+    <div class="container-fluid pt-5" id="work">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Jobs</h1>
+                <h1 class="position-absolute text-uppercase text-primary">My Work</h1>
+            </div>
+            <div class="col-12 text-center mb-2">
+                <a class="border-bottom border-primary text-decoration-none text-danger" href="">View details on my
+                    Github</a>
+            </div>
+            <div class="row pb-3">
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Full Stack Developer</h4>
+                    </div>
+                    <p>"Tôi yêu thích công việc của mình vì nó cho phép tôi tạo ra những thứ mới mẻ và hữu ích cho mọi
+                        người. Tôi tin rằng công nghệ có thể thay đổi thế giới và tôi muốn là một phần của sự thay đổi
+                        đó."</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Content Creator</h4>
+                    </div>
+                    <p>"Tôi tin rằng nội dung có sức mạnh để truyền cảm hứng, giáo dục và kết nối mọi người. Tôi muốn sử
+                        dụng nội dung của mình để tạo ra sự khác biệt trong thế giới này."</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Game Developer</h4>
+                    </div>
+                    <p>"Tôi yêu thích công việc của mình vì nó cho phép tôi mang đến niềm vui và sự giải trí cho mọi
+                        người. Tôi tin rằng trò chơi điện tử là một hình thức nghệ thuật và tôi muốn tạo ra những trò
+                        chơi sẽ khiến mọi người nhớ mãi."</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Cloud Engineer</h4>
+                    </div>
+                    <p>"Tôi tin rằng điện toán đám mây là tương lai của công nghệ và tôi muốn là một phần của sự thay
+                        đổi đó. Tôi yêu thích công việc của mình vì nó cho phép tôi tạo ra những hệ thống mạnh mẽ và
+                        linh hoạt có thể giúp mọi người làm việc hiệu quả hơn."</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Security Engineer</h4>
+                    </div>
+                    <p>"Tôi tin rằng bảo mật là một vấn đề quan trọng và tôi muốn là một phần của giải pháp. Tôi yêu
+                        thích công việc của mình vì nó cho phép tôi sử dụng kiến thức và kỹ năng của mình để bảo vệ
+                        những gì quan trọng nhất."</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">DevSecOps Designer</h4>
+                    </div>
+                    <p>"Tôi tin rằng DevSecOps là cách tiếp cận tương lai của phát triển phần mềm. Tôi yêu thích công
+                        việc của mình vì nó cho phép tôi tạo ra những hệ thống an toàn và hiệu quả hơn có thể giúp mọi
+                        người làm việc hiệu quả hơn."</p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Work End -->
+
+    <!-- Certify Start -->
+    <div class="container-fluid pt-5 pb-3" id="certify">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Certification</h1>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <a class="border-bottom border-primary text-decoration-none text-danger" href="">View all of my
+                        certificates here</a>
+                </div>
+                <div class="col-12 text-center mb-2">
+                    <ul class="list-inline mb-4" id="portfolio-flters">
+                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Design</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Development</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row portfolio-container">
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="./img/portfolio-1.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="./img/portfolio-1.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="./img/portfolio-2.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="./img/portfolio-2.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="./img/portfolio-3.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="./img/portfolio-3.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="./img/portfolio-4.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="./img/portfolio-4.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="./img/portfolio-5.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="./img/portfolio-5.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="./img/portfolio-6.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="./img/portfolio-6.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Certify End -->
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5" id="contact">
+        <div class="container">
+            <div class="position-relative d-flex align-items-center justify-content-center">
+                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
+                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="form-row">
+                                <div class="control-group col-sm-6">
+                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                        required="required" data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group col-sm-6">
+                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                        required="required"
+                                        data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                                    required="required" data-validation-required-message="Please enter a subject" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                                    required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5" id="social">
+        <div class="container text-center py-5">
+            <div class="d-flex justify-content-center mb-4">
+                <a class="btn btn-light btn-social mr-2" href="mailto:admin@crfnetwork.com"><i
+                        class="fab fa-google"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/ltp1120"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/ltp1120"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://github.com/lucthienphong1120"><i
+                        class="fab fa-github"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.youtube.com/@CodingReshapeFuture"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <a class="text-white" href="#">Privacy</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Terms</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">FAQs</a>
+                <span class="px-3">|</span>
+                <a class="text-white" href="#">Help</a>
+            </div>
+            <p class="m-0">&copy;<a class="text-white font-weight-bold" href="#">Luc Thien Phong</a>. All Rights
+                Reserved. Designed by <a class="text-white font-weight-bold"
+                    href="https://www.facebook.com/ltp1120">LTP</a>
+            </p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Scroll to Bottom -->
+    <i class="fa fa-2x fa-angle-double-down scroll-to-bottom"></i>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/typed/typed.min.js"></script>
+    <script src="./lib/easing/easing.min.js"></script>
+    <script src="./lib/waypoints/waypoints.min.js"></script>
+    <script src="./lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="./lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="./mail/jqBootstrapValidation.min.js"></script>
+    <script src="./mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
